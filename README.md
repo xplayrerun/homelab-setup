@@ -73,9 +73,24 @@ This is my personal AI workstation, built for:
 - You should install this only on personal, secure machines
 
 ---
+## 🧠 Conda + Jupyter Integration
 
-## 🧪 Future Plans
+After setting up the `ai` Conda environment, it is registered with JupyterLab so it can be used in notebooks:
 
-- Add Docker & `nvidia-container-toolkit`
-- Setup VSCode Remote SSH
-- Create launchers for JupyterLab or specific model tasks
+```bash
+conda install -y ipykernel nb_conda_kernels
+python -m ipykernel install --user --name=ai --display-name "Python (AI Lab)"
+```
+
+Once installed, open JupyterLab and select **"Python (AI Lab)"** as your kernel.
+## 📁 Working Directory
+
+Project notebooks and experiments are stored under:
+
+```bash
+~/Projects
+```
+
+Each experiment should live in its own subfolder.
+
+
