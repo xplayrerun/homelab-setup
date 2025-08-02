@@ -47,4 +47,10 @@ pip install transformers datasets scikit-learn pandas numpy matplotlib seaborn j
 # Test GPU visibility in PyTorch
 python -c "import torch; print('✅ GPU available:', torch.cuda.is_available()); print('🖥️ Using:', torch.cuda.get_device_name(0))"
 
+# 📌 Register Conda environment with Jupyter
+conda install -y ipykernel nb_conda_kernels
+
+# Register the 'ai' environment as a Jupyter kernel
+python -m ipykernel install --user --name=ai --display-name "Python (AI Lab)"
+
 echo "✅ Post-reboot setup complete. You're ready to build AI projects!"
